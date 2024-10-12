@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.tweet-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tweet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.like-button, .pass-button, .demark-button {
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.like-button:hover, .pass-button:hover, .demark-button:hover {
+  transform: scale(1.1);
+}
+
+.like-button:hover {
+  background-color: #34d399;
+}
+
+.pass-button:hover {
+  background-color: #f87171;
+}
+
+.demark-button:hover {
+  background-color: #60a5fa;
+}
+
+.bg-loading-pattern {
+  background-image: url('https://source.unsplash.com/random/1920x1080?abstract');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientAnimation 3s ease infinite;
+}
